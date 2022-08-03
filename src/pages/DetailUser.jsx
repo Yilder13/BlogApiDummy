@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import UserBack from "../backend/userBack";
+import UserService from "../services/userService";
 import { useParams } from "react-router";
 import { List, Item, Grid } from "semantic-ui-react";
 
@@ -9,8 +9,8 @@ export default function DetailUser() {
   const [user, setUser] = useState({});
 
   useEffect(() => {
-    let userBack = new UserBack();
-    userBack.getByUserId(id).then((result) => setUser(result.data));
+    let userService = new UserService();
+    userService.getByUserId(id).then((result) => setUser(result.data));
   }, [id]);
   if (user)
     return (

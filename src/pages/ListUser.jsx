@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from "react";
+import UserService from "../services/userService";
 import { List, Image } from "semantic-ui-react";
 import { Link } from "react-router-dom";
-import UserBack from "../backend/userBack";
+
 
 export default function ListUser() {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    let userBack = new UserBack();
-    userBack.getUsers().then((result) => setUsers(result.data.data));
+    let userService = new UserService();
+    userService.getUsers().then((result) => setUsers(result.data.data));
   },[]);
 
   return (

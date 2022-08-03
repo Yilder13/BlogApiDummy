@@ -1,14 +1,14 @@
 import React, {useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import {Icon, Image, Feed, Label, Card} from "semantic-ui-react"
-import PostBack from "../backend/postBack";
+import PostService from "../services/postService";
 
 export default function ListPost() {
     const[ posts, setPosts] = useState([]);
 
     useEffect(() => {
-        let postBack = new PostBack();
-        postBack.getPosts().then((result) => {
+        let postService = new PostService();
+        postService.getPosts().then((result) => {
             if(result){
                 const {data} = result;
                 setPosts(data?.data);

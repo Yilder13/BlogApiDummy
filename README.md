@@ -1,5 +1,20 @@
 # Getting Started with Create React App
 
+<p align="left">
+    <img height="200" src="./imagen1.png" />
+</p>
+
+<p align="left">
+    <img height="200" src="./imagen2.png" />
+</p>
+
+<p align="left">
+    <img height="200" src="./imagen3.png" />
+</p>
+
+<p align="left">
+    <img height="200" src="./imagen4.png" />
+</p>
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
